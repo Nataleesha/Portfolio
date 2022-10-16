@@ -1,0 +1,30 @@
+.header {
+  border-bottom: 1px solid var(--header-bottom-border);
+  position: relative;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+  }
+
+  &__button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    &:active {
+      .icon-menu,
+      .icon-cross {
+        fill: var(--highlight-color);
+      }
+    }
+  }
+}
+
+.desktop-menu {
+  display: none;
+}

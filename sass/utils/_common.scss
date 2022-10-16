@@ -1,0 +1,40 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--main-text-color);
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  color: var(--title-text-color);
+  @include font(36px, 1.167);
+  margin-bottom: 30px;
+}
+
+.container {
+  min-width: 320px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mobile {
+    width: 480px;
+  }
+
+  @include tablet {
+    width: 768px;
+  }
+
+  @include desktop {
+    width: 1200px;
+  }
+}
+

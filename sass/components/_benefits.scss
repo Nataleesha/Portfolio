@@ -1,0 +1,39 @@
+.benefits {
+
+  margin-bottom: 60px;
+  
+  &__item {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__name {
+    color: var(--title-text-color);
+    @include font(14px, 1.14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__descr {
+    @include font(14px, 1.7);
+    text-align: left;
+  }
+
+  &__icon {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--section-bgd-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+
+    .icon {
+      @include size(70px, 70px);
+    }
+  }
+}
