@@ -1,2 +1,1 @@
-# goit-markup-hw-05
-animations
+https://nataleesha.github.io/goit-markup-hw-08/
