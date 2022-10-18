@@ -1,12 +1,24 @@
 .benefits {
-
   margin-bottom: 60px;
+
+  @include tablet {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+  }
   
   &__item {
-    text-align: center;
 
     &:not(:last-child) {
       margin-bottom: 30px;
+    }
+
+    @include tablet {
+      flex-basis: calc((100% - 30px) / 2);
+      margin-bottom: 0;
     }
   }
 
@@ -16,6 +28,11 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
+    }
   }
 
   &__descr {

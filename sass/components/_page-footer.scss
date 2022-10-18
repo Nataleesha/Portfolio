@@ -6,6 +6,16 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
+
+  @include tablet {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-left: 76px;
+      padding-right: 89px;
+    }
+  }
 }
 
 .contacts {
@@ -33,7 +43,6 @@
   }
 }
 .social {
-
   margin-bottom: 60px;
 
   &__title {
@@ -80,4 +89,3 @@
     fill: currentColor;
   }
 }
-

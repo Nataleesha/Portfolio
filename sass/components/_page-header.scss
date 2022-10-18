@@ -6,7 +6,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 60px;
+    height: 60px;
+
+    @include tablet {
+      height: 80px;
+    }
   }
 
   &__button {
@@ -22,9 +26,10 @@
         fill: var(--highlight-color);
       }
     }
-  }
-}
 
-.desktop-menu {
-  display: none;
+    @include tablet {
+      display: none;
+    }
+
+  }
 }

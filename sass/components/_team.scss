@@ -3,6 +3,14 @@
   padding: 60px 0;
   background: var(--section-bgd-color);
 
+  &__list {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+
   &__img {
     display: block;
     max-width: 100%;
@@ -17,6 +25,14 @@
 
     &:not(:last-child) {
       margin-bottom: 30px;
+
+      @include tablet {
+        margin-bottom: 0;
+      }
+    }
+
+    @include tablet {
+      flex-basis: calc((100% - 30px) / 2);
     }
   }
 }
@@ -54,7 +70,7 @@
     color: var(--social-icons-color);
     transition: background-color 250ms var(--trans-timing-function),
       color 250ms var(--trans-timing-function);
-  
+
     &:active {
       background-color: var(--highlight-color);
       color: var(--secondary-text-color);
@@ -66,9 +82,3 @@
     fill: currentColor;
   }
 }
-
-
-
-  
-
-
