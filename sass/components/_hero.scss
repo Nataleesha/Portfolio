@@ -2,6 +2,10 @@
   background-color: var(--footer-bgd-color);
   margin-bottom: 60px;
 
+  @include desktop {
+    margin-bottom: 0;
+  }
+
   &__container {
     text-align: center;
   }
@@ -42,6 +46,7 @@
     @include desktop {
       max-width: 1200px;
       height: 600px;
+      padding-top: 200px;
       background-image: linear-gradient(
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
@@ -65,6 +70,12 @@
     @include font(26px, 1.6);
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @include desktop {
+      max-width: none;
+      width: 696px;
+      @include font(44px, 1.37);
+    }
   }
 
   &__button {

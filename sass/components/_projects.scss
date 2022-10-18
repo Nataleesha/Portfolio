@@ -1,3 +1,4 @@
+
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -8,9 +9,15 @@
   @include tablet {
     flex-wrap: nowrap;
     gap: 8px;
+    margin-bottom: 30px;
     max-width: 575px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @include desktop {
+    margin-top: 0;
+    margin-bottom: 50px;
   }
 }
 
@@ -34,19 +41,26 @@
     gap: 30px;
     margin-bottom: 60px;
   }
+
+  @include desktop {
+    margin-bottom: 0;
+  }
 }
 
 .project-item {
-  box-sizing: border-box;
   background: var(--secondary-text-color);
   margin-bottom: 30px;
 
-  @include tablet {
+  @media screen and (min-width: 468px) and (max-width: 1199px) {
     margin: 0;
     flex-basis: calc((100% - 30px) / 2);
     &:first-child .project-descr {
       height: 143px;
     }
+  }
+
+  @include desktop {
+    margin: 0;
   }
 }
 

@@ -2,6 +2,11 @@
   padding: 60px 0;
   text-align: center;
 
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +22,10 @@
     @include tablet {
       flex-basis: calc((100% - 60px) / 3);
     }
+
+    @include desktop {
+      flex-basis: calc((100% - 150px) / 6);
+    }
   }
 
   &__link {
@@ -30,6 +39,8 @@
     transition: color 250ms var(--trans-timing-function),
       border-color 250ms var(--trans-timing-function);
 
+    &:hover,
+    &:focus,
     &:active {
       color: var(--highlight-color);
       border-color: var(--highlight-color);

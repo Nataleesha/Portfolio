@@ -3,6 +3,11 @@
   padding: 60px 0;
   background: var(--section-bgd-color);
 
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   &__list {
     @include tablet {
       display: flex;
@@ -33,6 +38,10 @@
 
     @include tablet {
       flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @include desktop {
+      flex-basis: calc((100% - 90px) / 4);
     }
   }
 }
@@ -71,6 +80,8 @@
     transition: background-color 250ms var(--trans-timing-function),
       color 250ms var(--trans-timing-function);
 
+    &:hover,
+    &:focus,
     &:active {
       background-color: var(--highlight-color);
       color: var(--secondary-text-color);

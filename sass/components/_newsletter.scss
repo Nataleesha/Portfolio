@@ -2,6 +2,12 @@
   max-width: 450px;
   margin: 0 auto;
 
+  @include desktop {
+    max-width: none;
+    margin: 0;
+  }
+
+
   &__label {
     display: block;
     font-family: "Roboto";
@@ -12,6 +18,10 @@
     text-transform: uppercase;
     margin-bottom: 20px;
     color: var(--secondary-text-color);
+
+    @include desktop {
+      text-align: left;
+    }
   }
 
   &__input {
@@ -29,6 +39,12 @@
       border-color: var(--highlight-color);
     }
 
+    @include desktop {
+      @include size(358px, 50px);
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
+
     &::placeholder {
       font-family: "Roboto";
       font-style: normal;
@@ -40,8 +56,6 @@
   }
 
   &__button {
-    width: 200px;
-    height: 50px;
     color: var(--secondary-text-color);
     background-color: var(--highlight-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -49,9 +63,9 @@
     font-family: "Roboto";
     font-style: normal;
     font-weight: 700;
-    @include font(16px, 1.88);
+    @include font(16px, 1.875);
     letter-spacing: 0.06em;
-    padding: 10px 28px;
+    padding: 9px 28px;
     border-color: transparent;
     cursor: pointer;
     display: inline-flex;

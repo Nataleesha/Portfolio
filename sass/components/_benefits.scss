@@ -1,23 +1,38 @@
 .benefits {
   margin-bottom: 60px;
 
+  @include desktop {
+    &.section {
+      margin-bottom: 0;
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
+  }
+
   @include tablet {
     &__list {
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
+
+      @include desktop {
+        flex-wrap: nowrap;
+      }
     }
-
   }
-  
-  &__item {
 
+  &__item {
     &:not(:last-child) {
       margin-bottom: 30px;
     }
 
     @include tablet {
       flex-basis: calc((100% - 30px) / 2);
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      flex-basis: calc((100% - 90px) / 4);
       margin-bottom: 0;
     }
   }
