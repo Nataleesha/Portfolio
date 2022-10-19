@@ -1,4 +1,5 @@
 .hero {
+  height: 400px;
   margin-bottom: 60px;
   background-color: var(--hero-bgd-color);
   background-image: linear-gradient(
@@ -9,6 +10,10 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  &.section {
+    padding: 0;
+  }
 
   @include resolution {
     background-image: url("../images/hero-mobile-2x.jpg");
@@ -27,6 +32,7 @@
   }
 
   @include desktop {
+    height: 600px;
     margin-bottom: 0;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
@@ -41,9 +47,7 @@
 
   &__container {
     text-align: center;
-  }
 
-  &__bg {
     max-width: 480px;
     height: 400px;
     margin: 0 auto;
