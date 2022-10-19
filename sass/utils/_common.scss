@@ -3,6 +3,10 @@ body {
   color: var(--main-text-color);
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -23,7 +27,6 @@ p {
 }
 
 .container {
-  min-width: 320px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
